@@ -1,7 +1,7 @@
 <resources>
 
     <!--Название приложения-->
-    <string name="app_name">MVVM</string>
+    <string name="app_name">Конвертер валют</string>
 
     <!--Массив названий валют-->
     <string-array name="CurrencyNames">
@@ -39,7 +39,6 @@
         <item>PLN</item>
     </string-array>
 
-    <string name="Author">SiriHate©</string>
     <string name="text_live_currency">Текущий курс:</string>
     <string name="live_currency">1 USD = 74.85 RUB</string>
 

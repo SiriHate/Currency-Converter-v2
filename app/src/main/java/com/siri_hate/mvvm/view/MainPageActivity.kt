@@ -3,6 +3,7 @@ package com.siri_hate.mvvm.view
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.siri_hate.mvvm.R
@@ -18,7 +19,6 @@ class MainPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_page)
-
 
         // Переменная для передачи аббревиатур валют в фабрику ViewModel
         val currencyAbbreviation = resources.getStringArray(R.array.CurrencyAbbreviation)
@@ -162,54 +162,36 @@ class MainPageActivity : AppCompatActivity() {
 
 
             /// Обработка нажатий кнопок клавиатуры
-        buttonZero.setOnClickListener {
-            viewModel.keyboard("0")
+        val keyboardListener = View.OnClickListener { view ->
+            when (view.id) {
+                R.id.ButtonZero -> { viewModel.keyboard("0") }
+                R.id.ButtonOne -> { viewModel.keyboard("1") }
+                R.id.ButtonTwo -> { viewModel.keyboard("2") }
+                R.id.ButtonThree -> { viewModel.keyboard("3") }
+                R.id.ButtonFour -> { viewModel.keyboard("4") }
+                R.id.ButtonFive -> { viewModel.keyboard("5") }
+                R.id.ButtonSix -> { viewModel.keyboard("6") }
+                R.id.ButtonSeven -> { viewModel.keyboard("7") }
+                R.id.ButtonEight -> { viewModel.keyboard("8") }
+                R.id.ButtonNine -> { viewModel.keyboard("9") }
+                R.id.ButtonClear -> { viewModel.keyboard("Clear") }
+                R.id.ButtonDot -> { viewModel.keyboard("Dot") }
+            }
         }
 
-        buttonOne.setOnClickListener {
-            viewModel.keyboard("1")
-        }
-
-        buttonTwo.setOnClickListener {
-            viewModel.keyboard("2")
-        }
-
-        buttonThree.setOnClickListener {
-            viewModel.keyboard("3")
-        }
-
-        buttonFour.setOnClickListener {
-            viewModel.keyboard("4")
-        }
-
-        buttonFive.setOnClickListener {
-            viewModel.keyboard("5")
-        }
-
-        buttonSix.setOnClickListener {
-            viewModel.keyboard("6")
-        }
-
-        buttonSeven.setOnClickListener {
-            viewModel.keyboard("7")
-        }
-
-        buttonEight.setOnClickListener {
-            viewModel.keyboard("8")
-        }
-
-        buttonNine.setOnClickListener {
-            viewModel.keyboard("9")
-        }
-
-        buttonClear.setOnClickListener {
-            viewModel.keyboard("Clear")
-        }
-
-        buttonDot.setOnClickListener {
-            viewModel.keyboard("Dot")
-        }
-
+            /// Слушатели для каждой кнопки
+        buttonZero.setOnClickListener(keyboardListener)
+        buttonOne.setOnClickListener(keyboardListener)
+        buttonTwo.setOnClickListener(keyboardListener)
+        buttonThree.setOnClickListener(keyboardListener)
+        buttonFour.setOnClickListener(keyboardListener)
+        buttonFive.setOnClickListener(keyboardListener)
+        buttonSix.setOnClickListener(keyboardListener)
+        buttonSeven.setOnClickListener(keyboardListener)
+        buttonEight.setOnClickListener(keyboardListener)
+        buttonNine.setOnClickListener(keyboardListener)
+        buttonClear.setOnClickListener(keyboardListener)
+        buttonDot.setOnClickListener(keyboardListener)
 
             /// Кнопка перестановки валют местами
         changeCurrencyPosition.setOnClickListener {

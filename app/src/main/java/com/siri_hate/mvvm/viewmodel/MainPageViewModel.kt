@@ -62,8 +62,6 @@ class MainPageViewModel(
     val secondCurrencySelectedLiveData: LiveData<Int> = secondCurrencySelectedMutable
 
 
-
-
     // *Переменные* (END)---------------------------------------------------------------------------
 
 

@@ -10,39 +10,32 @@
     <LinearLayout
         android:id="@+id/TopLayout"
         android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:background="#232323"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/CenterLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/LiveCurrency"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/LiveCurrencyText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="2"
-            android:orientation="vertical">
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/text_live_currency"
+            android:textColor="#FFFFFF" />
 
-            <TextView
-                android:id="@+id/LiveCurrencyText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="@string/text_live_currency"
-                android:textColor="#FFFFFF" />
-
-            <TextView
-                android:id="@+id/LiveCurrencyValue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="@string/live_currency"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/LiveCurrencyValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/live_currency"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 
@@ -416,7 +409,7 @@
                 android:text="@string/key_clear"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
-                app:backgroundTint="#ED760E"
+                app:backgroundTint="#D46b06"
                 app:rippleColor="#80FFFFFF" />
         </TableRow>
 
