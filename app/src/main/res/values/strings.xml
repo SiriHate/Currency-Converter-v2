@@ -1,0 +1,71 @@
+<resources>
+
+    <!--Название приложения-->
+    <string name="app_name">MVVM</string>
+
+    <!--Массив названий валют-->
+    <string-array name="CurrencyNames">
+        <item>Российский рубль</item>
+        <item>Доллар США</item>
+        <item>Евро</item>
+        <item>Швейцарский франк</item>
+        <item>Фунт стерлингов</item>
+        <item>Японская иена</item>
+        <item>Украинская гривна</item>
+        <item>Казахстанский тенге</item>
+        <item>Белорусский рубль</item>
+        <item>Турецкая лира</item>
+        <item>Китайский юань</item>
+        <item>Австралийский доллар</item>
+        <item>Канадский доллар</item>
+        <item>Польский злотый</item>
+    </string-array>
+
+    <!--Массив аббревиатур валют-->
+    <string-array name="CurrencyAbbreviation">
+        <item>RUB</item>
+        <item>USD</item>
+        <item>EUR</item>
+        <item>CHF</item>
+        <item>GBP</item>
+        <item>JPY</item>
+        <item>UAH</item>
+        <item>KZT</item>
+        <item>BYN</item>
+        <item>TRY</item>
+        <item>CNY</item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>PLN</item>
+    </string-array>
+
+    <string name="Author">SiriHate©</string>
+    <string name="text_live_currency">Текущий курс:</string>
+    <string name="live_currency">1 USD = 74.85 RUB</string>
+
+    <!--Кнопки клавиатуры-->
+    <string name="key_clear">⌫</string>
+    <string name="key_0">0</string>
+    <string name="key_dot">.</string>
+    <string name="key_3">3</string>
+    <string name="key_2">2</string>
+    <string name="key_1">1</string>
+    <string name="key_6">6</string>
+    <string name="key_8">8</string>
+    <string name="key_5">5</string>
+    <string name="key_4">4</string>
+    <string name="key_9">9</string>
+    <string name="key_7">7</string>
+    <string name="value_admin_info2">RUB</string>
+    <string name="admin_btn">Изменить</string>
+    <string name="value_admin_name">1 USD =</string>
+    <string name="value2_name">RUB</string>
+    <string name="value1_name">USD</string>
+    <string name="info_page">Info_page</string>
+    <string name="flag1">flag1</string>
+    <string name="change_position">Change_position</string>
+    <string name="flag2">flag2</string>
+    <string name="go_back">go_back</string>
+    <string name="Select_currency">Выберите валюту</string>
+
+</resources>

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    tools:context=".view.MainPageActivity">
+
+    <LinearLayout
+        android:id="@+id/TopLayout"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="#232323"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/LiveCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/LiveCurrencyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/text_live_currency"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/LiveCurrencyValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/live_currency"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CenterLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#232323"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/Keyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopLayout">
+
+        <LinearLayout
+            android:id="@+id/FirstCurrencyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:background="#2E2D2D"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/FirstCurrencyFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:contentDescription="@string/flag1"
+                app:srcCompat="@drawable/usd_flag" />
+
+            <LinearLayout
+                android:id="@+id/FirstCurrencyData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/FirstCurrencyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/FirstCurrencyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/value1_name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/FirstCurrencySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="#696969"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ChangeCurrencyPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+            android:background="#232323"
+            android:contentDescription="@string/change_position"
+            app:srcCompat="@drawable/change_position"
+            app:tint="#FFFFFF"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <LinearLayout
+            android:id="@+id/SecondCurrencyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:background="#2E2D2D"
+            android:gravity="center_vertical|end"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/SecondCurrencyFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/flag2"
+                app:srcCompat="@drawable/rub_flag" />
+
+            <LinearLayout
+                android:id="@+id/SecondCurrencyData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/SecondCurrencyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/SecondCurrencyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/value2_name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/SecondCurrencySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="#696969"
+                android:gravity="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/Keyboard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#232323"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:id="@+id/FirstLineKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/ButtonSeven"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_7"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonEight"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_8"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonNine"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_9"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/SecondLineKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/ButtonFour"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_4"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonFive"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_5"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonSix"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_6"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/ThirdLineKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/ButtonOne"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_1"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonTwo"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_2"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonThree"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_3"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/FourthLineKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/ButtonDot"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="7dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_dot"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#848484"
+                app:rippleColor="#80FFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonZero"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="7dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_0"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#4F4F4F"
+                app:rippleColor="#80FFFFFF" />
+
+            <Button
+                android:id="@+id/ButtonClear"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="7dp"
+                android:layout_weight="100"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/key_clear"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:backgroundTint="#ED760E"
+                app:rippleColor="#80FFFFFF" />
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
